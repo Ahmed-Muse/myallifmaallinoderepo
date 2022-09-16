@@ -8,7 +8,7 @@ def myindexpage(request):
     form=NamesForm()
     
     if request.method=='POST':
-        form=NamesForm(request.POST)
+        form=NamesForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
            

@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -122,5 +123,10 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+
+#PATH WHERE UPLOADED FILES WILL BE STORED...in the media folder
+MEDIA_ROOT=os.path.join(BASE_DIR,'static/media')
+MEDIA_URL='/media/'#fetch images/media using this path when viewing through the browser..
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

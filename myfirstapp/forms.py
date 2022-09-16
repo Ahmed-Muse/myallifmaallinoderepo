@@ -4,4 +4,4 @@ from .models import *
 class NamesForm(forms.ModelForm): #the forms here is the one imported up there.
     class Meta:
         model = namesmodel
-        fields = ["name"]
+        fields = ["name","myimage","mydocument"]

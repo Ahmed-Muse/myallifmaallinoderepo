@@ -20,12 +20,22 @@
 <a href="{% url 'myfirstapp:about' %}">
     about
 </a>
-<form method='POST' action=''>{% csrf_token %}
+<form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
     {{form}}
     <input type="submit" value='   Save    ' class="btn btn-success">
     </form>
     {% for name in names %}
     {{name.name}}
+    {% if name.myimage %}
+                 <img src="{{name.myimage.url}}"  style="width: 100px;">
+                {% else %}
+                <span class="text-muted">No cover</span>
+                {% endif %}
+
+    {{name.m}}
+    <a href="{{ name.mydocument.url }}" class="btn btn-primary btn-sm" target="_blank" >
+        <img src="{% static 'images/download.png'%}" width="30"></a></td>
+    {{name.mydocument}}
     {% endfor %}
     addded domain two
     <h1>
