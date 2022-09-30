@@ -22,7 +22,7 @@ def registerpage(request):
             username=register_form.cleaned_data.get('username')
             messages.success(request,'Account was created for '+ username)
            
-            return redirect('login:loginpage')
+            return redirect('allifmaalapp:allifmaalmaindashboard')
     
     context={
         "title":title,
@@ -39,7 +39,7 @@ def loginpage(request):
         user=authenticate(request,username=username,password=password)
         if user is not None:#if there is an authenticated user
             login(request, user)
-            return redirect('myfirstapp:myindexpage')
+            return redirect('allifmaalapp:allifmaalmaindashboard')
         else:
             messages.info(request,'Dear '+username + ', Your username or password is incorrect ! ')
             form=AuthenticationForm(request)
@@ -72,7 +72,7 @@ def editProfile(request):
         if editForm.is_valid():
             editForm.save()
            
-            return redirect('myfirstapp:myindexpage')
+            return redirect('allifmaalapp:allifmaalmaindashboard')
     
     context={
         "title":title,

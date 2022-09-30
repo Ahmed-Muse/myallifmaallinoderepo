@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
         #Leave as empty string for base url
-	path('allifmaaldashboard', views.allifmaalmaindashboard, name="allifmaalmaindashboard"),#this is the home page
+	path('allifmaaldashboard/', views.allifmaalmaindashboard, name="allifmaalmaindashboard"),#this is the home page
 	#path('about',views.about,name='about')
 	
     
