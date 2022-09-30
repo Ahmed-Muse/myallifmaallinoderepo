@@ -470,20 +470,3 @@ def delete_allifmaal_task(request,pk):
         return redirect('allifmaalapp:allifmaal_Tasks')
 
     return redirect('allifmaalapp:allifmaal_Tasks')
-
-
-def update_allifmaal_tasks(request, pk):
-    update_task= AllifmaalTasksModel.objects.get(id=pk)
-    form = AddAllifmaalTasksForm(instance=  update_task)
-   
-    if request.method == 'POST':
-        form = AddAllifmaalTasksForm(request.POST, instance=  update_task)
-        if form.is_valid():
-            form.save()
-          
-            return redirect('allifmaalapp:allifmaal_Tasks')
-    context = {
-		'form':form,
-        " update_task": update_task,
-    }
-    return render(request, 'todoapp/toDoList.html', context)#this is the main page rendered first

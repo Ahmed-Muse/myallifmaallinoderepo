@@ -30,6 +30,6 @@ path('Allifmaal-Tasks/', views.allifmaal_Tasks, name="allifmaal_Tasks"),
 path('Mark-This-Task-Complete/<str:pk>/', views.markAllifmaalTaskComplete, name="markAllifmaalTaskComplete"),
 path('Completed-Tasks/', views.allifmaalCompletedTasksList, name="allifmaalCompletedTasksList"),
 path('Delete-This-Task/<str:pk>/', views.delete_allifmaal_task, name="delete_allifmaal_task"),
-path('Update-This-Task/<str:pk>/', views.update_allifmaal_tasks, name="update_allifmaal_tasks"),
+
       
 ]  
