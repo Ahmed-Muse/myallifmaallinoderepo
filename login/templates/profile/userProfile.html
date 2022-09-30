@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="{% url 'blogapp:blogs' %}">Blogs <span
+                        <a class="nav-link text-white" href="">Blogs <span
                                 class="sr-only">(current)</span></a>
                     </li>
                 </ul>
@@ -87,12 +87,6 @@
                                            Bio: {{user.bloguserprofilemodel.blogUserBio}}<br>
                                            
 
-                                             
-                                           
-
-                                            
-
-
                                             <th scope="row">Email</th>
                                             <td>{{user.bloguserprofilemodel.blogUserEmail}}</td>
                                         </tr>
@@ -114,7 +108,7 @@
                             </div>
                             <div class="col-md-4">
                                 {% if user.bloguserprofilemodel.blogUserProfileImage %}
-                                <img src="{{user.bloguserprofilemodel.blogUserProfileImage.url}}"
+                                <img src=""
                                  width="150" height="150" class="rounded-circle">
                                 {% endif %}
                             </div>
