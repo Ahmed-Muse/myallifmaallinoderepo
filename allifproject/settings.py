@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "myfirstapp",
     "login",
     'crispy_forms',
+    "allifmaalapp",
     
     "django.contrib.humanize",
 ]
