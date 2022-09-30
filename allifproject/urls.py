@@ -23,7 +23,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('', include('myfirstapp.urls')),
+     path('myfristapp', include('myfirstapp.urls')),
+     path('Allifmaal/', include('allifmaalapp.urls')),
+      path('', include('login.urls')),
 ]
  
 if settings.DEBUG:#if debug which is in development stage only, then add the path below

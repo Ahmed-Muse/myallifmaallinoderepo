@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "myfirstapp",
+    "allifmaalapp",
+    'crispy_forms',
+    'login',
+    "django.contrib.humanize",
 ]
 
 MIDDLEWARE = [
