@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
         #Leave as empty string for base url
-	path('', views.myindexpage, name="myindexpage"),#this is the home page
+	path('myfirstapp', views.myindexpage, name="myindexpage"),#this is the home page
 	#path('about',views.about,name='about')
 	path('about',views.about,name='about')
     

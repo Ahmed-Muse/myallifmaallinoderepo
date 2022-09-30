@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "myfirstapp",
-    
+    "login",
     'crispy_forms',
     
     "django.contrib.humanize",
