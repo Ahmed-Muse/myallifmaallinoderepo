@@ -289,7 +289,7 @@ def post_allifmaal_invoice(request,pk):
         customer_id=mycust.id#this gives the id of the customer specified in the invoice
         customer_account_balance=mycust.balance#this gets the account balance of the customer
     else:
-        return redirect('logistics:add_invoice_items_alwen',pk=myinvid)
+        return redirect('allifmaalapp:allifmaal_invoices')
     
 
 
@@ -467,7 +467,7 @@ def delete_allifmaal_task(request,pk):
         AllifmaalTasksModel.objects.get(id=pk).delete()
     except:
         messages.error(request, 'Something went wrong')
-        return redirect('todoapp:to-do-list ')
+        return redirect('allifmaalapp:allifmaal_Tasks')
 
     return redirect('allifmaalapp:allifmaal_Tasks')
 
